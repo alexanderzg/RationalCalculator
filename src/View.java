@@ -108,7 +108,6 @@ public class View extends Application {
             if(model.size()>1){
                 
                 try{
-                    
                     Object obj = model.newElement(display.getText());
                     model.push((Rational)obj);
                     display.setText(model.sum());
@@ -116,7 +115,6 @@ public class View extends Application {
                     model.clear();
                     model.push((Rational)obj2);
                     display2.setText(model.toString());
-                    
                 }catch(Exception a){
                     
                     display.setText(model.sum());
@@ -124,7 +122,6 @@ public class View extends Application {
                     model.clear();
                     model.push((Rational)obj);
                     display2.setText(model.toString());
-
                 }
             }else{
                 display.clear();
@@ -144,13 +141,11 @@ public class View extends Application {
                 btn.setOnAction(e->{
   
                     try{
-                        
                         if(flag){
                         Object obj = model.newElement(display.getText());
                         model.push((Rational)obj);
                         display2.setText(model.toString());
                         }
-                        
                     }catch(Exception exe){                        
                     }
  
@@ -174,7 +169,6 @@ public class View extends Application {
                     }
                 });
             }else{
-                
                 btn.setOnAction(unaryHandler);
             }          
         }
